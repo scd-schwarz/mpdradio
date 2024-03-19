@@ -1,0 +1,12 @@
+---
+- name: Make sure alsa utils are present
+  ansible.builtin.apt:
+    name: alsa-utils
+    state: present
+  become: true
+
+- name: Make sure mpd is present
+  ansible.builtin.apt:
+    name: mpd
+    state: present
+  become: true

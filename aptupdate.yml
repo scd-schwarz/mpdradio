@@ -1,0 +1,10 @@
+---
+- name: Update mpdserver
+  hosts: mpdserver
+  become: true
+  tasks:
+    - name: Ensure packages are up to date
+      ansible.builtin.apt:
+        name: "*"
+        state: latest # noqa package-latest
+        update_cache: true

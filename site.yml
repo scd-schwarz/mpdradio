@@ -1,0 +1,5 @@
+---
+- name: Fully set up mpdserver
+  hosts: mpdserver
+  roles:
+    - mpd
